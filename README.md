@@ -1,0 +1,2 @@
+* gobuster
+* rustscan
