@@ -27,4 +27,6 @@ echo ". ~/.z/z.sh" >> ~/.bash_profile
 echo "source /usr/share/doc/fzf/examples/key-bindings.zsh" >> ~/.zshrc
 echo "source /usr/share/doc/fzf/examples/completion.zsh" >> ~/.zshrc
 
+#install rustscan
+cargo install rustscan
 
