@@ -10,6 +10,16 @@ packages = (
   "fzf"
 )
 
+#change font
+wget -P /tmp https://moji.or.jp/wp-content/ipafont/IPAexfont/ipaexg00401.zip
+unzip /tmp/ipaexg00401.zip
+
+#install VirutalBox
+VirtualBox-Packages = (
+  "linux-headers-generic"
+  "virtualbox"
+)
+
 #fcitx5 Theme
 git clone https://github.com/waleslau/fcitx5-themes.git /tmp/fcitx5-themes
 mkdir -p ~/.local/share/fcitx5/themes
