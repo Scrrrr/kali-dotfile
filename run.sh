@@ -8,17 +8,15 @@ packages = (
   "gobuster"
   "z"
   "fzf"
+  "nvim"
 )
 
-#change font
-wget -P /tmp https://moji.or.jp/wp-content/ipafont/IPAexfont/ipaexg00401.zip
-unzip /tmp/ipaexg00401.zip
+apt update -y
+apt upgrade -y
 
-#install VirutalBox
-VirtualBox-Packages = (
-  "linux-headers-generic"
-  "virtualbox"
-)
+for list in ${packages[@]}; do
+    apt install -y ${list}
+done
 
 #fcitx5 Theme
 git clone https://github.com/waleslau/fcitx5-themes.git /tmp/fcitx5-themes
@@ -36,6 +34,7 @@ echo ". ~/.z/z.sh" >> ~/.bash_profile
 #setting fzf 
 echo "source /usr/share/doc/fzf/examples/key-bindings.zsh" >> ~/.zshrc
 echo "source /usr/share/doc/fzf/examples/completion.zsh" >> ~/.zshrc
+echo "export PATH="$HOME/.cargo/bin:$PATH" >> ~/.zshrc
 
 #install rustscan
 cargo install rustscan
