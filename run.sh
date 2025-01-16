@@ -9,6 +9,7 @@ packages = (
   "z"
   "fzf"
   "nvim"
+  "feroxbuster"
 )
 
 apt update -y
