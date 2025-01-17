@@ -10,6 +10,7 @@ packages = (
   "fzf"
   "nvim"
   "feroxbuster"
+  "chisel"
 )
 
 apt update -y
