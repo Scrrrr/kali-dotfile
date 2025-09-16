@@ -1,6 +1,6 @@
 #!/bin/bash
 
-packages = (
+packages=(
   "task-japanese"
   "task-japanese-desktop"
   "fcitx5-mozc"
@@ -20,14 +20,18 @@ for list in ${packages[@]}; do
     apt install -y ${list}
 done
 
-#fcitx5 Theme
+# fcitx5のテーマ
 git clone https://github.com/waleslau/fcitx5-themes.git /tmp/fcitx5-themes
 mkdir -p ~/.local/share/fcitx5/themes
 mv /tmp/fcitx5-themes/Alpha-black ~/.local/share/fcitx5/themes
 
-#locale setting
+#ローカルの設定
 dpkg-reconfigure locales
 update-locale LANG=ja_JP.UTF-8
+
+# キーボード配列の変更
+localectl set-keymap us
+localectl set-x11-keymap us
 
 #install z command
 git clone https://github.com/rupa/z.git ~/.z
