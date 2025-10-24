@@ -1,5 +1,5 @@
 ```
-sudo ./run.sh
+sudo bash run.sh
 ```
 * gobuster
 * rustscan
