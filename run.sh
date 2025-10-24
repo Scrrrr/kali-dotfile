@@ -8,7 +8,6 @@ packages=(
   "gobuster"
   "z"
   "fzf"
-  "nvim"
   "feroxbuster"
   "chisel"
 )
@@ -22,8 +21,8 @@ done
 
 # fcitx5のテーマ
 git clone https://github.com/waleslau/fcitx5-themes.git /tmp/fcitx5-themes
-mkdir -p ~/.local/share/fcitx5/themes
-mv /tmp/fcitx5-themes/Alpha-black ~/.local/share/fcitx5/themes
+mkdir -p /home/kali/.local/share/fcitx5/themes
+mv /tmp/fcitx5-themes/Alpha-black /home/kali/.local/share/fcitx5/themes
 
 #ローカルの設定
 dpkg-reconfigure locales
@@ -34,13 +33,13 @@ localectl set-keymap us
 localectl set-x11-keymap us
 
 #install z command
-git clone https://github.com/rupa/z.git ~/.z
-echo ". ~/.z/z.sh" >> ~/.bash_profile
+git clone https://github.com/rupa/z.git /home/kali/.z
+echo ". /home/kali/.z/z.sh" >> /home/kali/.bash_profile
 
 #setting fzf 
-echo "source /usr/share/doc/fzf/examples/key-bindings.zsh" >> ~/.zshrc
-echo "source /usr/share/doc/fzf/examples/completion.zsh" >> ~/.zshrc
-echo "export PATH="$HOME/.cargo/bin:$PATH" >> ~/.zshrc
+echo "source /usr/share/doc/fzf/examples/key-bindings.zsh" >> /home/kali/.zshrc
+echo "source /usr/share/doc/fzf/examples/completion.zsh" >> /home/kali/.zshrc
+echo "export PATH="$HOME/.cargo/bin:$PATH" >> /home/kali/.zshrc
 
 #install rustscan
 cargo install rustscan
